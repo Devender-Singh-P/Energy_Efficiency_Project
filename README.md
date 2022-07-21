@@ -1,120 +1,35 @@
-# Energy_Efficiency_Project
+### Source:
 
-Application url:
-[HousingPredictor](https://ml-regression-app.herokuapp.com/)
+The dataset was created by Angeliki Xifara (angxifara '@' gmail.com, Civil/Structural Engineer) and was processed by Athanasios Tsanas (tsanasthanasis '@' gmail.com, Oxford Centre for Industrial and Applied Mathematics, University of Oxford, UK).
 
-## Start Machine Learning project.
+### Data Set Information:
 
-### Software and account Requirement.
+We perform energy analysis using 12 different building shapes simulated in Ecotect. The buildings differ with respect to the glazing area, the glazing area distribution, and the orientation, amongst other parameters. We simulate various settings as functions of the afore-mentioned characteristics to obtain 768 building shapes. The dataset comprises 768 samples and 8 features, aiming to predict two real valued responses. It can also be used as a multi-class classification problem if the response is rounded to the nearest integer.
 
-1. [Github Account](https://github.com)
-2. [Heroku Account](https://dashboard.heroku.com/login)
-3. [VS Code IDE](https://code.visualstudio.com/download)
-4. [GIT cli](https://git-scm.com/downloads)
-5. [GIT Documentation](https://git-scm.com/docs/gittutorial)
+### Attribute Information:
 
+The dataset contains eight attributes (or features, denoted by X1...X8) and two responses (or outcomes, denoted by y1 and y2). The aim is to use the eight features to predict each of the two responses.
 
-Creating conda environment
-```
-conda create -p venv python==3.7 -y
-```
-```
-conda activate venv/
-```
-OR 
-```
-conda activate venv
-```
+Specifically:  
+X1 Relative Compactness  
+X2 Surface Area  
+X3 Wall Area  
+X4 Roof Area  
+X5 Overall Height  
+X6 Orientation  
+X7 Glazing Area  
+X8 Glazing Area Distribution  
+y1 Heating Load  
+y2 Cooling Load (Not considered here) 
 
-```
-pip install -r requirements.txt
-```
+### Relevant Papers:
 
-To Add files to git
-```
-git add .
-```
+A. Tsanas, A. Xifara: 'Accurate quantitative estimation of energy performance of residential buildings using statistical machine learning tools', Energy and Buildings, Vol. 49, pp. 560-567, 2012
 
-OR
-```
-git add <file_name>
-```
+### Citation Request:
 
-> Note: To ignore file or folder from git we can write name of file/folder in .gitignore file
+A. Tsanas, A. Xifara: 'Accurate quantitative estimation of energy performance of residential buildings using statistical machine learning tools', Energy and Buildings, Vol. 49, pp. 560-567, 2012 (the paper can be accessed from [Web Link])
 
-To check the git status 
-```
-git status
-```
-To check all version maintained by git
-```
-git log
-```
+For further details on the data analysis methodology:
+A. Tsanas, 'Accurate telemonitoring of Parkinsonâ€™s disease symptom severity using nonlinear speech signal processing and statistical machine learning', D.Phil. thesis, University of Oxford, 2012 (which can be accessed from [Web Link])
 
-To create version/commit all changes by git
-```
-git commit -m "message"
-```
-
-To send version/changes to github
-```
-git push origin main
-```
-
-To check remote url 
-```
-git remote -v
-```
-
-To setup CI/CD pipeline in heroku we need 3 information
-1. HEROKU_EMAIL = anishyadav7045075175@gmail.com
-2. HEROKU_API_KEY = <>
-3. HEROKU_APP_NAME = ml-regression-app
-
-BUILD DOCKER IMAGE
-```
-docker build -t <image_name>:<tagname> .
-```
-> Note: Image name for docker must be lowercase
-
-
-To list docker image
-```
-docker images
-```
-
-Run docker image
-```
-docker run -p 5000:5000 -e PORT=5000 f8c749e73678
-```
-
-To check running container in docker
-```
-docker ps
-```
-
-Tos stop docker conatiner
-```
-docker stop <container_id>
-```
-
-
-
-```
-python setup.py install
-```
-
-
-Install ipykernel
-
-```
-pip install ipykernel
-```
-
-
-Data Drift:
-When your datset stats gets change we call it as data drift
-
-
-
-## Write a function to get training file path from artifact dir
