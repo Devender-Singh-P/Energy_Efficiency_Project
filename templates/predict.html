@@ -71,7 +71,7 @@
                 Energy Efficiency or Heating Load
             </div>
             <div class="card-body">
-        {% if context['Energy Efficiency_data'] is not none %}
+        {% if context['energy_efficiency_data'] is not none %}
         <table class="table table-striped">
             <caption>Energy Efficiency or Heating Load </caption>
             <tr>
@@ -79,7 +79,7 @@
                 <th>Feature Value</th>
 
             </tr>
-            {% for column,value in context['Energy Efficiency_data'].items() %}
+            {% for column,value in context['energy_efficiency_data'].items() %}
 
 
 
